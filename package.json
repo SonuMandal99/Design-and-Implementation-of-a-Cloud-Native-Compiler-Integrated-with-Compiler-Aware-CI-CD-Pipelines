@@ -1,0 +1,10 @@
+{
+  "name": "compiler-aware-cicd-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "run": "node compiler/compiler.js && node cicd/decision.js",
+    "block": "set \"INPUT_FILE=invalid_code.js\" && node compiler/compiler.js && node cicd/decision.js",
+    "allow": "set \"INPUT_FILE=valid_code.js\" && node compiler/compiler.js && node cicd/decision.js"
+  }
+}
